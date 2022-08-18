@@ -20,6 +20,7 @@ messageForm[0].addEventListener('submit', function(event) {
     const userEmail = event.target.email.value;
     const userMessage = event.target.message.value;
     console.log(userName + "\n" + userEmail + "\n" + userMessage);
+    
     let messageSection = document.getElementById("messages");
     let messageList = document.getElementById("messages").querySelector("ul");
     let newMessage = document.createElement("li");
@@ -33,19 +34,7 @@ messageForm[0].addEventListener('submit', function(event) {
         let entry = removeButton.parentElement;
         entry.remove();
     });
-
     newMessage.appendChild(removeButton);
 
     messageForm[0].reset();
 });
-
-/*let removeButton = document.createElement("button");
-removeButton.type = "button";
-removeButton.innerText = "remove";
-removeButton.addEventListener('click', function(e) {
-    let entry = removeButton.parentnode;
-    entry.remove();
-});
-
-newMessage.appendChild(removeButton);*/
-
