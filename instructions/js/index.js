@@ -43,18 +43,16 @@ messageForm[0].addEventListener('submit', function(event) {
     messageForm[0].reset();
 });
 
-let githubRequest = new XMLHttpRequest();
-githubRequest.open('GET', 'https://api.github.com/users/vsrodriguez3/repos');
-githubRequest.send();
-githubRequest.onload = function() { 
-    let repositories = JSON.parse(githubRequest.responseText);
-    console.log(repositories);
-
-    let projectSection = document.getElementById("projects");
-    let projectsList = projectSection.querySelector("ul");
-    for (i = 0; i < repositories.length; i++) {
-        let project = document.createElement("li");
-        project.innerText = repositories[i].name;
-        projectsList.appendChild(project);
-    };
-};
+fetch('https://api.github.com/users/vsrodriguez3/repos')
+    .then(function(response) {
+        return response.json();
+    })
+    .then(function(response) {
+        let projectSection = document.getElementById("projects");
+        let projectsList = projectSection.querySelector("ul");
+        for (i = 0; i < response.length; i++) {
+            let project = document.createElement("li");
+            project.innerText = response[i].name;
+            projectsList.appendChild(project);
+        };
+    });
