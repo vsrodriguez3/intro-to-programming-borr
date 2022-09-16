@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap" rel="stylesheet">
         <title>About Me</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
-        Vanessa Rodriguez
+        <p class="my-name">VANESSA RODRIGUEZ</p>
         <section>
-            <h1>About</h1> 
-            <p>Current registered nurse with a passion for technology and healthcare.
+            <h1>about</h1> 
+            <p class="about-info">Current registered nurse with a passion for technology and healthcare.
                     Currently working on my dream of becoming a software developer so that I can offer 
                     powerful solutions to patients and healthcare professionals.</p>
         </section>
         <section>
-            <h1>Experience</h1>
-                <ul>
-                    <li>Registered Nurse in a Neuroscience Unit</li>
-                    <li>Registered Nurse in an IV Therapy Clinic</li>
-                    <li>Physiology Tutor at a University</li>
+            <h1>experience</h1>
+                <ul class="experiences-container">
+                    <li class="experience-items">Registered Nurse in a Neuroscience Unit</li>
+                    <li class="experience-items">Registered Nurse in an IV Therapy Clinic</li>
+                    <li class="experience-items">Physiology Tutor at a University</li>
                 </ul>
         </section>
         <section>
-            <h2>Skills</h2>
+            <h2>skills</h2>
             <ul id="skills"></ul>
         </section>
         <section>
-            <h1>Connect</h1>
+            <h1>connect</h1>
                 <ul>
                     <li>LinkedIn</li>
                     <li>Email</li>
                 </ul>
         </section>
         <section>
-            <h2>Leave a Message</h2>
+            <h2>leave a message</h2>
             <form name="leave_message">
                 <div>
                     <label for="name">Name:</label>
@@ -49,11 +53,11 @@
                     <textarea name="message" required=true></textarea>
                 </div>
                 <br>
-                <input type="submit">
+                <input type="submit" class="submit-button">
             </form>
         </section>
         <section id="messages">
-            <h2>Messages</h2>
+            <h2>messages</h2>
             <ul></ul>
         </section>
         <footer></footer>

@@ -11,6 +11,7 @@ mySkills.forEach((item) => {
     let li = document.createElement("li");
     li.innerText = item;
     skillsList.appendChild(li);
+    li.classList.add('skills-item');
 });
 
 let messageForm = document.getElementsByName("leave_message")
@@ -27,6 +28,8 @@ messageForm[0].addEventListener('submit', function(event) {
     newMessage.innerHTML = '<a href="mailto:">' + event.target.name.value + '</a>' + ' <span>wrote: ' + event.target.message.value + '</span>  '
     messageList.appendChild(newMessage);
 
+    newMessage.classList.add('message-block');
+
     const removeButton = document.createElement("button");
     removeButton.type = "button";
     removeButton.innerText = "Remove";
@@ -35,6 +38,7 @@ messageForm[0].addEventListener('submit', function(event) {
         entry.remove();
     });
     newMessage.appendChild(removeButton);
+    removeButton.classList.add('remove-button');
 
     messageForm[0].reset();
 });
