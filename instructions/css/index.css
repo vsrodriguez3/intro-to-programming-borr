@@ -6,6 +6,26 @@ body {
     height: auto;
 }
 
+a:link {
+    color: rgb(104, 107, 145);
+    text-decoration: none;
+  }
+
+a:visited {
+    color: rgb(47, 49, 66);
+    text-decoration: none;
+}
+
+.message-block a:link {
+    color: white;
+    text-decoration: underline;
+}
+
+a:hover, a:active {
+    background-color: rgb(47, 49, 66);
+    color: white;
+  }
+
 .my-name {
     font-weight: 1000;
     color: white;
@@ -146,4 +166,41 @@ footer {
     background: rgba(255, 255, 255, 0.151);
     width: 100%;
     margin: 0;
+}
+
+footer .social {
+    color: white;
+}
+
+footer .social a {
+    color: inherit;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    line-height: 58px;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin: 0px 12px;
+}
+
+@media (max-width: 832px) {
+    nav li {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    nav {
+        background: white;
+        position: relative;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    #skills {
+        display: list-item;
+    }
 }
